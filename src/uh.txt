@@ -1,0 +1,5 @@
+
+~\Documents\GitHub\chrome-extension
+Error
+Invalid value for 'icons'.
+Could not load manifest.

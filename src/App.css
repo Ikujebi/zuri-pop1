@@ -1,0 +1,26 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=Inter:wght@200;300;400;500;600;700;800;900&family=Lato:wght@100;300;400;700;900&family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+  
+  @import url('https://fonts.googleapis.com/css2?family=Sora:wght@200;300;400;500;600;700;800&display=swap');
+
+
+ .home{ font-family: 'DM Sans', sans-serif;}
+.lato{font-family: 'Lato', sans-serif;}
+.poppings{font-family: 'Poppins', sans-serif;}
+
+.inter{font-family: 'Inter', sans-serif;}
+
+.sora{font-family: 'Sora', sans-serif;}
+
+.custom{
+  color: #141414;
+}
+/* Use a more specific selector */
+.ant-form-item-label > label.ant-form-item-required::before {
+  content: none; /* Hide the asterisk */
+}
+
+
+.ant-select-focused .ant-select-selector {
+  border-color: gray !important; /* Adjust the color as needed */
+}

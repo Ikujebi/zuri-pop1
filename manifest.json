@@ -1,0 +1,57 @@
+{
+  "manifest_version": 3,
+  "name": "HelpMeOut Screen Recorder",
+  "default_locale": "en",
+  "description": "It records user's screen",
+  "icons": {
+    "16": "./src/images/Layer 1.png",
+    "32": "./src/images/Layer 1.png",
+    "120": "./src/images/Layer 1.png"
+  },
+  "action": {
+    "default_popup": "index.html",
+    "icon": {
+      "16": "./src/images/Layer 1.png",
+      "32": "./src/images/Layer 1.png",
+      "120": "./src/images/Layer 1.png"
+    }
+  },
+  "host_permissions": [
+    "http://*/",
+    "https://*/"
+  ],
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "permissions": [
+    "desktopCapture",
+    "storage",
+    "tabs",
+    "tabCapture",
+    "activeTab",
+    "webRequest",
+  "webRequestBlocking",
+    "identity"
+   
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "js": ["content.js"],
+    "all_frames": true,
+    "run_at": "document_end"
+  }],
+  "version": "1.0.0",
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' https://cdn.webrtc-experiment.com; object-src 'self';"
+},
+  
+  "web_accessible_resources": [
+    {
+      "resources": ["./src/images/Layer 1.png"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
